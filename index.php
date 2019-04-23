@@ -1,10 +1,18 @@
+<?php 
+
+$x = rand(1, 10);
+$text = '';
+for ($z = 1; $z <= $x; $z++) {
+    $text .= "Tai yra $z-tasis ciklas<br>";
+}    
+?>
 <html>
     <head>
-        <title>h1fg</title>
+        <title>main</title>
     </head>
     <body>
         <P>
-            dfg
+           <?php print $text;?>
         </P>
     </body>
 </html>
