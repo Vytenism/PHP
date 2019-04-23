@@ -42,7 +42,7 @@ $text2 = "Nerukydamas pirmadieni-ketvirtaideni sutaupyciau $kainuos2 eur.";
     </head>
     <body>
         <P>
-            <?php print $text2 . ' ' . $text;?>
+            <?php print $text . ' ' . $text2;?>
         </P>
     </body>
 </html>
