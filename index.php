@@ -1,12 +1,12 @@
 <?php 
 
 $kates = rand(1, 3);
-$sunis = rand(1, 3);
+$sunys = rand(1, 3);
 
 $katasuniai = 0;
 
 for ($k = 1; $k <= $kates; $k++) {
-    for ($s = 1; $s <= $sunis; $s++) {
+    for ($s = 1; $s <= $sunys; $s++) {
         $success = rand(0,1);
         if ($success) {
             $katasuniai++;
@@ -15,7 +15,7 @@ for ($k = 1; $k <= $kates; $k++) {
     }
 }
 
-$text = "Event'e dalyvavo $kates kates ir $sunis sunys.<br>"
+$text = "Event'e dalyvavo $kates kates ir $sunys sunys.<br>"
         . "Katasuniu iseiga: $katasuniai";
 ?>
 <html>
