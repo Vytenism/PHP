@@ -1,10 +1,22 @@
 <?php 
 
-$x = rand(1, 10);
-$text = '';
-for ($z = 1; $z <= $x; $z++) {
-    $text .= "Tai yra $z-tasis ciklas<br>";
-}    
+$kates = rand(1, 3);
+$sunis = rand(1, 3);
+
+$katasuniai = 0;
+
+for ($k = 1; $k <= $kates; $k++) {
+    for ($s = 1; $s <= $sunis; $s++) {
+        $success = rand(0,1);
+        if ($success) {
+            $katasuniai++;
+            break;
+        }
+    }
+}
+
+$text = "Event'e dalyvavo $kates kates ir $sunis sunys.<br>"
+        . "Katasuniu iseiga: $katasuniai";
 ?>
 <html>
     <head>
@@ -12,7 +24,7 @@ for ($z = 1; $z <= $x; $z++) {
     </head>
     <body>
         <P>
-           <?php print $text;?>
+           <?php print $text ;?>
         </P>
     </body>
 </html>
