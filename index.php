@@ -1,15 +1,17 @@
 <?php
 
-$days = 0;
-$grikiu_pradzia = 5000;
-for ($grikiai = $grikiu_pradzia ; $grikiai>0; $grikiai -= rand(200, 500)) {
-       $days++;
-}
-    
-    $date = date('Y-M-d', strtotime("+$days days"));
- $text = "jei turesiu $grikiu_pradzia g. grikiu, galesiu juos valgyti $days dienu. jei pradesiu siandien, grikiai pasibaigs $date.";
-?>
+$months = 24; //mėnesiai
+$car_price_new = 30000; //Eurų
+$car_price = $car_price_new; // (% nuo esamos vertės per mėnesį)
 
+for ($months = 0; $months <= 24; $months++){
+     $car_price -= round($car_price * 0.02, 2);
+    $depreciated = 100-(($car_price * 100) / $car_price_new);
+
+}
+$text = "Po 24 menesiu, masinos verte bus $car_price eur.<br> Nuvertejo $depreciated %";
+
+?>
 <html>
     <head>
         <title>asdv</title>
