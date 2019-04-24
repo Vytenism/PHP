@@ -1,15 +1,16 @@
 <?php
 
-$months = 24; //mėnesiai
 $car_price_new = 30000; //Eurų
 $car_price = $car_price_new; // (% nuo esamos vertės per mėnesį)
+$santaupos = 15000;
 
-for ($months = 0; $months <= 24; $months++){
-     $car_price -= round($car_price * 0.02, 2);
-    $depreciated = 100-(($car_price * 100) / $car_price_new);
+for ($m = 0; $car_price >= $santaupos; $m++){
+    $car_price -= round($car_price*0.02);    
+    print "Car price at $m = $car_price<br>";
+} 
 
-}
-$text = "Po 24 menesiu, masinos verte bus $car_price eur.<br> Nuvertejo $depreciated %";
+$likutis = $santaupos - $car_price;
+$text = "Po $m menesiu, masinos verte bus $car_price. nusipirkus tau dar liks $likutis eur."
 
 ?>
 <html>
@@ -18,7 +19,7 @@ $text = "Po 24 menesiu, masinos verte bus $car_price eur.<br> Nuvertejo $depreci
     </head>
     <body>
         <p>
-             <?php print $text;?>
+           <?php print $text; ?> 
         </p>
     </body>
 </html>
