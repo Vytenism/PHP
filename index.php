@@ -1,10 +1,13 @@
 <?php
 
 $produktai = [
-    'dideli' => [
+    'size' => [
         'du dideli kiausiniai',
         'vienas didelis grietines indelis'
     ],
-    'mazi' => 'vienas mazas baklazanas'
+    'amount' => [
+        'vienas mazas baklazanas',
+        'vienas didelis grietines indelis'
+        ],
 ];
 var_dump ($produktai);
