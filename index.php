@@ -1,17 +1,20 @@
 <?php
 
 $arr = [
-    'Petro' => [
+    'petro' => [
+        'name' => 'Petro',
         'surname' => 'Pizdzio',
         'what' => 'prapistas',
         'item' => 'telefonas'
     ],
-    'Tomo' => [
+    'tomo' => [
+        'name' => 'Tomas',
         'surname' => 'Ablomo',
         'what' => 'naudojamas',
         'item' => 'bulijonas'
     ],
-    'Anos' => [
+    'anos' => [
+        'name' => 'Anos',
         'surname' => 'Shitkovos',
         'what' => 'pasibaiges',
         'item' => 'rulonas'
