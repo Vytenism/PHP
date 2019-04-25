@@ -1,28 +1,33 @@
 <?php
 
 $arr = [
-    'kiausiniai' => [
-        'name' => 'Kiausinis',
-        'amount' => 2,
-        'size' => 'didelis'
+    'name' => [
+        'Petro',
+        'Tomo',
+        'Anos'
     ],
-    'baklazanas' => [
-        'name' => 'Baklazanas',
-        'amount' => 1,
-        'size' => 'mazas'
-        ],
-    'grietine' => [
-        'name' => 'Grietine',
-        'amount' => 1,
-        'size' => 'didelis'
+    'surname' => [
+        'Pizdzio',
+        'Ablono',
+        'Shitkovos'
+    ],
+    'what' => [
+        'prapistas',
+        'naudojmas',
+        'pasibaiges'
+    ],
+    'item' => [
+        'telefonas',
+        'buljonas',
+        'rulonas'
     ]
 ];
 
-print $arr['grietine']['amount'];
+
 var_dump ($arr);
 
 ?>
-<html>
+<!--<html>
     <head>
         <title>array</title>
     </head>
@@ -39,4 +44,4 @@ var_dump ($arr);
             </span>
         </div>   
     </body>
-</html>
+</html>-->
