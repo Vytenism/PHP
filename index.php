@@ -1,25 +1,20 @@
 <?php
 
 $arr = [
-    'name' => [
-        'Petro',
-        'Tomo',
-        'Anos'
+    'Petro' => [
+        'surname' => 'Pizdzio',
+        'what' => 'prapistas',
+        'item' => 'telefonas'
     ],
-    'surname' => [
-        'Pizdzio',
-        'Ablono',
-        'Shitkovos'
+    'Tomo' => [
+        'surname' => 'Ablomo',
+        'what' => 'naudojamas',
+        'item' => 'bulijonas'
     ],
-    'what' => [
-        'prapistas',
-        'naudojmas',
-        'pasibaiges'
-    ],
-    'item' => [
-        'telefonas',
-        'buljonas',
-        'rulonas'
+    'Anos' => [
+        'surname' => 'Shitkovos',
+        'what' => 'pasibaiges',
+        'item' => 'rulonas'
     ]
 ];
 
