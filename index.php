@@ -1,8 +1,10 @@
 <?php
 
-$array = [
-    'vaisius' => 'Oboulys',
-    'vaisius2' => 'Apelsinas',
-    'darzove' => 'Cukinija',
+$produktai = [
+    'dideli' => [
+        'du dideli kiausiniai',
+        'vienas didelis grietines indelis'
+    ],
+    'mazi' => 'vienas mazas baklazanas'
 ];
-var_dump ($array);
+var_dump ($produktai);
