@@ -1,30 +1,21 @@
 <?php
+function amzius($amzius){
+ 
+    if($amzius<0){
+        return 'Klaida';
+    }
+    if($amzius<18){
+        return 'nepilnametis';
+    }
+    if($amzius<65){
+        return 'pilnametis';
+    }
+    return 'pensinikas';
+}
 
-$arr = [
-    'petro' => [
-        'name' => 'Petro',
-        'surname' => 'Pizdzio',
-        'what' => 'prapistas',
-        'item' => 'telefonas'
-    ],
-    'tomo' => [
-        'name' => 'Tomas',
-        'surname' => 'Ablomo',
-        'what' => 'naudojamas',
-        'item' => 'bulijonas'
-    ],
-    'anos' => [
-        'name' => 'Anos',
-        'surname' => 'Shitkovos',
-        'what' => 'pasibaiges',
-        'item' => 'rulonas'
-    ]
-];
-
-
-var_dump ($arr);
-
+print amzius(65)
 ?>
+
 <!--<html>
     <head>
         <title>array</title>
