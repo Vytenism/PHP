@@ -1,62 +1,83 @@
 <?php
 
-	$mano_atmintis = [
-	    'Penktadienis',
-	    'Paskaita',
-	    'Baras',
-	    'Viskis',
-	    'Alus',
-	    'Degtine',
-	    'Alus',
-	    'Pirmadienis',
-	    'Paskaita'
-	];
-        $draugo_atmintis = [
-            'Penktadienis',
-	    'Laisve',
-	    'Baras',
-	    'Dektine',
-	    'Alus',
-	    'Sidras',
-	    'Vynas',
-	    'Sekmadienis',
-	    'Paskaita'
-        ];
-        
-$rand_flashback = rand(0, count($mano_atmintis)- 1);   
-$flashback_text = '#' . $rand_flashback . ':' . $mano_atmintis[$rand_flashback];   
-$rand_flashback2 = rand(0, count($draugo_atmintis)- 1); 
-$flashback_text1 = '#' . $rand_flashback2 . ':' . $draugo_atmintis[$rand_flashback2];
+$mano_atmintis = [
+    'Penktadienis',
+    'Paskaita',
+    'Baras',
+    'Viskis',
+    'Alus',
+    'Alus',
+    'Alus',
+    'Pirmadienis',
+    'Paskaita'
+];
+
+$draugo_atmintis = [
+    'Penktadienis',
+    'Rytas',
+    'Baras',
+    'Viskis',
+    'Alus',
+    'Degtine',
+    'Mieles',
+    'Degtine',
+    'Samagonas',
+    'Antradienis'
+];
+
+$flashback_index = rand(0, count($mano_atmintis) - 1);
+$flashback_num = $flashback_index + 1;
+$flashback_text = "#$flashback_num: {$mano_atmintis[$flashback_index]}";
 
 $bendri_atsiminimai = [];
-foreach($mano_atmintis as $prisiminimas){
-    $egzist = in_array($prisiminimas, $draugo_atmintis);
-    if($egzist) {
+foreach ($mano_atmintis as $prisiminimas) {
+    $egzistuoja = in_array($prisiminimas, $draugo_atmintis);
+
+    if ($egzistuoja) {
         $bendri_atsiminimai[] = $prisiminimas;
     }
 }
-
+var_dump(array_unique($bendri_atsiminimai));
 ?>
-
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Klases daras</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<h1>Kas buvo penktadienį ?!</h1>
-	<h2>Bendra</h2>
-	<p>
-		<ul> <!-- foreach -->
-			<?php foreach($bendri_atsiminimai as $prisiminimas): ?>
-			<li> 
-				<?php print $prisiminimas; ?>
-			</li>
-			<?php endforeach; ?>
-		</ul><!-- endforeach -->
-	</p>
-        
-    
-</body>
+    <head>
+        <title>PENKTADIENIS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Kas buvo penktadienį ?!</h1>
+        <h2>Mano atmintis</h2>
+        <ul> 
+            <!-- foreach -->
+            <?php foreach ($mano_atmintis as $prisiminimas): ?>
+                <li> 
+                    <?php print $prisiminimas; ?>
+                </li>
+            <?php endforeach; ?>
+            <!-- endforeach -->
+        </ul>
+        <h3><?php print $flashback_text; ?></h3>               
+        <h2>Draugo Atmintis</h2>
+        <ul> 
+            <!-- foreach -->
+            <?php foreach ($draugo_atmintis as $prisiminimas): ?>
+                <li> 
+                    <?php print $prisiminimas; ?>
+                </li>
+            <?php endforeach; ?>
+            <!-- endforeach -->
+        </ul>
+        <h3>Sutape prisiminimai:</h3>
+        <ul> 
+            <!-- foreach -->
+            <?php foreach ($bendri_atsiminimai as $prisiminimas): ?>
+                <li>
+                    <?php print $prisiminimas; ?>
+                </li>
+            <?php endforeach; ?> 
+            <!-- endforeach -->
+        </ul>
+    </body>
 </html>
