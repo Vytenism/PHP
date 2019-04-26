@@ -1,19 +1,39 @@
 <?php
-function amzius($amzius){
- 
-    if($amzius<0){
-        return 'Klaida';
-    }
-    if($amzius<18){
-        return 'nepilnametis';
-    }
-    if($amzius<65){
-        return 'pilnametis';
-    }
-    return 'pensinikas';
-}
 
-print amzius(65)
+$arr = [
+    'section1' => [
+        'eggs' => [
+            'amount' => [
+                'one' => 1,
+                'two' => 2,
+                'three' => 3
+            ],
+        ],
+        'greek yoghourt',
+        'yoghourt' => [
+            'amount' => [
+                'one' => 1,
+                'two' => 2,
+            ],    
+        ],
+        'fish' => 0
+    ],
+    'section2' => [
+        'milk',
+        'kefir' => 0,
+        'vodka' => [
+            'amount' => [
+                'one' => 1,
+                'two' => 2,
+            ]
+        ],    
+        'Kechup'
+    ]
+];
+
+
+var_dump ($arr);
+
 ?>
 
 <!--<html>
