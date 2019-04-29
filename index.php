@@ -2,7 +2,7 @@
 
 $dishes = [
     'nut_salad' => [
-        'name' => 'Nut Salad',
+        'name' => 'Nuts Salad',
         'price' => 3.44,
         'ingredients' => [
             'Nuts',
@@ -12,12 +12,21 @@ $dishes = [
     'bulldish' => [
         'name' => 'Bulldish',
         'price' => 4.77,
-        'ingridients' => [
+        'ingredients' => [
             'Rice',
             'Soja sauce'
         ]
     ]
 ];
+print $dishes['nut_salad']['name'];
+print $dishes['nut_salad']['price'];
+print $dishes['nut_salad']['ingredients'][0];
+print $dishes['nut_salad']['ingredients'][1] . '<br>';
+
+print $dishes['bulldish']['name'];
+print $dishes['bulldish']['price'];
+print $dishes['bulldish']['ingredients'][0];
+print $dishes['bulldish']['ingredients'][1] . '<br>';
 
 ?>
 
@@ -29,31 +38,31 @@ $dishes = [
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <ul>
-<?php foreach ($dishes as $dishes_index => $dish): ?>
-                <li>
-
-    <?php print $dishes_index; ?>
-                    <ul>
-                    <?php foreach ($dish as $dishes_index2 => $parameters): ?>
-                            <li>
-                            <?php print $dishes_index2; ?>
-                                <?php if (is_array($parameters)) : ?> 
-                                    <ul>
-                                    <?php foreach ($parameters as $ingri): ?>
-                                            <li>
-                                            <?php print $ingri; ?>
-                                            </li>
-                                    <?php endforeach; ?>	
-                                    </ul>
-                                    <?php else : ?>
-                                    <?php print $parameters . '<br>'; ?>
-                                <?php endif ?>
-                            </li>
-                            <?php endforeach; ?>
-                    </ul>
-                </li>
-<?php endforeach; ?>
-        </ul>
+        <!--	<ul>-->
+        <!--		--><?php //foreach ($dishes as $dishes_index =>$dish):  ?>
+        <!--			<li>-->
+        <!---->
+        <!--				--><?php //print $dishes_index;  ?>
+        <!--				<ul>-->
+        <!--					--><?php //foreach ($dish as $dish_index => $parameters):  ?>
+        <!--						<li>-->
+        <!--							--><?php //print $dish_index; ?>
+        <!--                            --><?php //if (is_array($parameters)): ?>
+        <!--                                <ul>-->
+        <!--                                    --><?php //foreach ($parameters as $ingri):  ?>
+        <!--                                        <li>-->
+        <!--                                            --><?php //print $ingri;  ?>
+        <!--                                        </li>-->
+        <!--                                    --><?php //endforeach;  ?>
+        <!--                                </ul>-->
+        <!--                            --><?php //else: ?>
+        <!--                                --><?php //print $parameters  . '<br>'; ?>
+        <!--                            --><?php //endif;  ?>
+        <!--						</li>-->
+        <!--					--><?php //endforeach;  ?>
+        <!--				</ul>-->
+        <!--			</li>-->
+        <!--		--><?php //endforeach;  ?>
+        <!--	</ul>-->
     </body>
 </html>
