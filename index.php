@@ -1,68 +1,20 @@
 <?php
 
-$dishes = [
-    'nut_salad' => [
-        'name' => 'Nuts Salad',
-        'price' => 3.44,
-        'ingredients' => [
-            'Nuts',
-            'Joghurt'
-        ]
+$ataskaita = [
+    [
+        'name' => 'IKI Darbo Uzmokesits',
+        'amount' => 600
     ],
-    'bulldish' => [
-        'name' => 'Bulldish',
-        'price' => 4.77,
-        'ingredients' => [
-            'Rice',
-            'Soja sauce'
-        ]
+    [
+        'name' => 'Kalvariju Nacnykas',
+        'amount' => 15
+    ],
+    [
+        'name' => 'Europos prekybos centras',
+        'amount' => 200
+    ],
+    [
+        'name' => 'Kartingai',
+        'amount' => 120
     ]
 ];
-print $dishes['nut_salad']['name'];
-print $dishes['nut_salad']['price'];
-print $dishes['nut_salad']['ingredients'][0];
-print $dishes['nut_salad']['ingredients'][1] . '<br>';
-
-print $dishes['bulldish']['name'];
-print $dishes['bulldish']['price'];
-print $dishes['bulldish']['ingredients'][0];
-print $dishes['bulldish']['ingredients'][1] . '<br>';
-
-?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <!--	<ul>-->
-        <!--		--><?php //foreach ($dishes as $dishes_index =>$dish):  ?>
-        <!--			<li>-->
-        <!---->
-        <!--				--><?php //print $dishes_index;  ?>
-        <!--				<ul>-->
-        <!--					--><?php //foreach ($dish as $dish_index => $parameters):  ?>
-        <!--						<li>-->
-        <!--							--><?php //print $dish_index; ?>
-        <!--                            --><?php //if (is_array($parameters)): ?>
-        <!--                                <ul>-->
-        <!--                                    --><?php //foreach ($parameters as $ingri):  ?>
-        <!--                                        <li>-->
-        <!--                                            --><?php //print $ingri;  ?>
-        <!--                                        </li>-->
-        <!--                                    --><?php //endforeach;  ?>
-        <!--                                </ul>-->
-        <!--                            --><?php //else: ?>
-        <!--                                --><?php //print $parameters  . '<br>'; ?>
-        <!--                            --><?php //endif;  ?>
-        <!--						</li>-->
-        <!--					--><?php //endforeach;  ?>
-        <!--				</ul>-->
-        <!--			</li>-->
-        <!--		--><?php //endforeach;  ?>
-        <!--	</ul>-->
-    </body>
-</html>
