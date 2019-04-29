@@ -7,14 +7,14 @@ $ataskaita = [
     ],
     [
         'name' => 'Kalvariju Nacnykas',
-        'amount' => 15
+        'amount' => -15
     ],
     [
         'name' => 'Europos prekybos centras',
-        'amount' => 200
+        'amount' => -200
     ],
     [
         'name' => 'Kartingai',
-        'amount' => 120
+        'amount' => -120
     ]
 ];
