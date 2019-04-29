@@ -32,12 +32,23 @@ $flashback_text = "#$flashback_num: {$mano_atmintis[$flashback_index]}";
 $bendri_atsiminimai = [];
 foreach ($mano_atmintis as $prisiminimas) {
     $egzistuoja = in_array($prisiminimas, $draugo_atmintis);
-
     if ($egzistuoja) {
         $bendri_atsiminimai[] = $prisiminimas;
     }
 }
-var_dump(array_unique($bendri_atsiminimai));
+$atsiminimai = [];
+foreach ($mano_atmintis as $prisiminimas) {
+    $egzistuoja = in_array($prisiminimas, $draugo_atmintis);
+    $duplikuojasi = in_array($prisiminimas, $atsiminimai);
+    if ($egzistuoja && !$duplikuojasi){
+        $atsiminimai[] = $prisiminimas;
+    }
+}
+
+
+
+//$nesikartojantis = array_unique($bendri_atsiminimai);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,6 +84,16 @@ var_dump(array_unique($bendri_atsiminimai));
         <ul> 
             <!-- foreach -->
             <?php foreach ($bendri_atsiminimai as $prisiminimas): ?>
+                <li>
+                    <?php print $prisiminimas; ?>
+                </li>
+            <?php endforeach; ?> 
+            <!-- endforeach -->
+        </ul>
+         <h3>nesikartojantis prisiminimai:</h3>
+        <ul> 
+            <!-- foreach -->
+            <?php foreach ($atsiminimai as $prisiminimas): ?>
                 <li>
                     <?php print $prisiminimas; ?>
                 </li>
