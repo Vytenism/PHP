@@ -6,6 +6,9 @@ $words = [
 
 foreach($words as $names){
     $pateko = rand(0, 1);
+    
+    var_dump("tikrinam zodi: $names ar pateko: $pateko ");
+    
     if ($pateko){
         $atrinkti_zodziai[]= $names;
     }
