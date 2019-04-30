@@ -1,55 +1,18 @@
 <?php
-$daiktai = [
-    [
-        'name' => 'Kremas',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Riesutai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Raktai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Telefonas',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Lupdazis',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Vaistai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Kojines',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-];
-$daiktai['color']['y'] = rand(0, 1);
-if ($daiktai['color']['y'] > 0) {
-    $color = 'Sviesus';
-} else {
-    $color = 'Tamsus';
-}
-$size = rand(50, 300);
-$daiktai['size']['x'] = $size;
-$random_name = $daiktai[rand(0, 6)];
+$daiktai = ['Kremas','Riestuai','Lupdazis','Kojnes','Raktai'];
+$size = rand(1, 20);
+$is_dark = rand(0, 1);
 
-$name =$random_name['name'];
-$text = $name . ' uzima ' . $size . ' cm3' . ' Daiktas ' . $color;
+$rand_name = rand(0, count($daiktai)-1);
+
+if($is_dark){
+    $color = 'tamsus';
+} else {
+    $color = 'sviesus';
+}
+
+$text = "$daiktai[$rand_name] uzima $size cm3. Daiktas $color.";
 ?>
-<!DOCTYPE html>
 <html>
     <head>
         <title></title>
