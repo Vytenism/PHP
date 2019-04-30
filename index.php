@@ -1,30 +1,24 @@
 <?php
-$atrinkti_zodziai = [];
+
+$rasinys= [];
 $words = [
     'petras', 'lauke', 'ryte', 'prie', 'maxima', 'mate'
 ];
-
-foreach($words as $names){
-    $pateko = rand(0, 1);
-    
-    var_dump("tikrinam zodi: $names ar pateko: $pateko ");
-    
-    if ($pateko){
-        $atrinkti_zodziai[]= $names;
-    }
+$rasinio_ilgis = rand(100, 300);
+for ($zodziai=0; $zodziai<$rasinio_ilgis; $zodziai++){
+    $rand_index = rand(0, count($words)-1);
+    $random_word = $words[$rand_index];
+    $rasinys[]= $random_word;
 }
-
+var_dump($rasinys);
 ?>
-
 <html>
     <head>
         <title>array</title>
     </head>
     <body>
         <ul>
-            <?php foreach ($atrinkti_zodziai as $atrinktas_zodis): ?> 
-            <li><?php print $atrinktas_zodis; ?></li>
-            <?php endforeach ;?>
+
         </ul>
 
     </body>
