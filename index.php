@@ -1,25 +1,70 @@
 <?php
-
-$rasinys= [];
-$words = [
-    'petras', 'lauke', 'ryte', 'prie', 'maxima', 'mate'
+$daiktai = [
+    [
+        'name' => 'Kremas',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Riesutai',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Raktai',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Telefonas',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Lupdazis',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Vaistai',
+        'size' => 'x',
+        'color' => 'y',
+    ],
+    [
+        'name' => 'Kojines',
+        'size' => 'x',
+        'color' => 'y',
+    ],
 ];
-$rasinio_ilgis = rand(100, 300);
-for ($zodziai=0; $zodziai<$rasinio_ilgis; $zodziai++){
-    $rand_index = rand(0, count($words)-1);
-    $random_word = $words[$rand_index];
-    $rasinys[]= $random_word;
+$daiktai['color']['y'] = rand(0, 1);
+if ($daiktai['color']['y'] > 0) {
+    $color = 'Sviesus';
+} else {
+    $color = 'Tamsus';
 }
-var_dump($rasinys);
+$size = rand(50, 300);
+$daiktai['size']['x'] = $size;
+$random_name = $daiktai[rand(0, 6)];
+
+$name =$random_name['name'];
+$text = $name . ' uzima ' . $size . ' cm3' . ' Daiktas ' . $color;
 ?>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>array</title>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+        </style>
     </head>
     <body>
-        <ul>
-
-        </ul>
-
+        <p><?php print $text ;?></p>
     </body>
 </html>
+
+
+
+
+
+
