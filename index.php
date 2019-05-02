@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * 
+ * Generuoja dinamine matrica
+ * @return array matrica
+ */
 function slot_run($size){
     $square = [];
     
@@ -13,5 +17,5 @@ function slot_run($size){
     }
     return $square;
 }
-
-var_dump(slot_run(rand(1, 5)));
+$size = rand(1, 5);
+var_dump(slot_run($size));
