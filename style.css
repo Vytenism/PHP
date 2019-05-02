@@ -3,14 +3,21 @@ section div {
     padding: 1%;
     margin: 1%;
 }
+
 section {
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
+
 .blue {
-    background-color: blue;
+    background-color: #1728c4;
 }
+
 .orange {
-    background-color: orange;
+    background-color: #0adb1c;
+}
+
+.red {
+    background-color: #ff0000;
 }
