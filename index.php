@@ -2,13 +2,15 @@
 
 function slot_run(){
     $square = [];
-    for($x = 1; $x <= 5; $x++){
+    $y = rand(3, 5);
+    
+    for($x = 1; $x <= $y; $x++){
         $row = [];
-        for($z = 1; $z <=5; $z++){
-            $numbers = rand(0, 1);
-            $row []= $numbers;
+        
+        for($z = 1; $z <=$y; $z++){ 
+            $row[] = rand(0, 1);
         }
-        $square[] = $row;
+        $square[]=$row;   
     }
     return $square;
 }
