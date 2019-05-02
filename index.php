@@ -1,72 +1,43 @@
 <?php
 
-$gerimai = [
-    [
-        'name' => 'Vilkmerges alus',
-        'kaina' => 4.50,
-        'nuolaida' => 0
-    ],
-    [
-        'name' => 'Stumbro degtine',
-        'kaina' => 8.50,
-        'nuolaida' => 10
-    ],
-    [
-        'name' => 'Svyturio alus',
-        'kaina' => 3.50,
-        'nuolaida' => 15
-    ],
-    [
-        'name' => 'Zemaitijos pienas',
-        'kaina' => 1.50,
-        'nuolaida' => 30
-    ],
-];
-
-foreach ($gerimai as $index => &$gerimas) {
-    if ($gerimas['nuolaida'] > 0) {
-        $gerimas['css_class'] = 'big_font';
-//        $kaina_su_nuolaida = round($gerimas['kaina'] * (100 - $gerimas['nuolaida']) / 100);
-//        $gerimai[$index]['kaina_su_nuolaida'] = $kaina_su_nuolaida;
-    } else {
-        $gerimas['css_class'] = 'small_font';
-    }
+function slot_run() {
+    $array = [
+        [rand(0, 1), rand(0, 1), rand(0, 1)],
+        [rand(0, 1), rand(0, 1), rand(1, 2)],
+        [rand(0, 1), rand(1, 2), rand(0, 1)]
+    ];
+    return $array;
 }
 
-var_dump($gerimai);
+$array1 = slot_run();
+//foreach ($array1 as $index) {
+//    foreach ($index as $color) {
+//        if ($color > 0) {
+//            $array1[$color]['css_class'] = 'blue';
+//        } else {
+//            $array1[$color]['css_class'] = 'orange';
+//        }
+//    }
+//}
 ?>
-<!DOCTYPE html>
+
 <html>
     <head>
-        <title>Gerimai</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <style>
-            .big_font {
-                font-size: 50px;
-            }
-            
-            .big_font .kaina {
-                text-decoration: line-through;
-            }
-        </style>
+        <title>function's</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
     </head>
     <body>
-        <ul>
-            <?php foreach ($gerimai as $gerimas): ?>
-                <li class="<?php print $gerimas['css_class']; ?>">
-                    <span><?php print $gerimas['name']; ?></span>
-                    <?php if (isset($gerimas['kaina_su_nuolaida'])): ?>
-                        <span><?php print $gerimas['kaina_su_nuolaida']; ?></span>
+            <?php foreach ($array1 as $index): ?>
+            <section>
+            <?php foreach ($index as $value): ?>
+                    <?php if ($value > 0): ?>
+                        <div class="blue"></div>
+                    <?php else: ?>
+                        <div class="orange"></div>
                     <?php endif; ?>
-                    <span class="kaina"><?php print $gerimas['kaina']; ?></span>
-                </li>
+                <?php endforeach; ?>
+            </section>
             <?php endforeach; ?>
-        </ul>
     </body>
 </html>
-
-
-
-
-

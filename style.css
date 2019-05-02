@@ -1,0 +1,16 @@
+section div {
+    border: 1px solid black;
+    padding: 1%;
+    margin: 1%;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.blue {
+    background-color: blue;
+}
+.orange {
+    background-color: orange;
+}
