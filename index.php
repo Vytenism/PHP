@@ -17,5 +17,28 @@ function slot_run($size){
     }
     return $square;
 }
+
 $size = rand(1, 5);
-var_dump(slot_run($size));
+$array = slot_run($size);
+
+?>
+
+<html>
+    <head>
+        <title>functions</title>
+        <<link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <?php foreach ($array as $index => $value): ?>
+    <section>
+        <?php foreach ($value as $index => $random): ?>
+            <?php if ($random): ?>
+                <div class="blue"></div>
+            <?php else: ?>
+                <div class="orange"></div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </section>
+        <?php endforeach; ?>
+    </body>
+</html>
